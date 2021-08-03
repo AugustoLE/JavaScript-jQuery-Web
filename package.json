@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "server": "^1.0.34"
+    "server": "^1.0.34",
+    "sweetalert": "^2.1.2"
   }
 }
