@@ -124,3 +124,89 @@ $(document).ready(function () {
   }
 
 });
+
+
+// Formulario
+$(document).ready(function () {
+
+  var formulario = $('#formulario');
+  var nombre = $('#nombre');
+  var email = $('#email');
+  var mensaje = $('#mensaje');
+
+  function valNombre(e) {
+
+    if (nombre.val() == '' || nombre.val() == null) {
+      swal ( "Oops" ,  "Por favor, verifica los datos del formulario" ,  "error" )
+      e.preventDefault();
+      $('input[type="text"] + .error').css('display', 'block');
+    } else {
+      $('input[type="text"] + .error').css('display', 'none');
+    }
+
+  }
+
+  function valEmail(e) {
+
+    if (email.val() == '' || email.val() == null) {
+      swal ( "Oops" ,  "Por favor, verifica los datos del formulario" ,  "error" )
+      e.preventDefault();
+      $('input[type="email"] + .error').css('display', 'block');
+    } else {
+      $('input[type="email"] + .error').css('display', 'none');
+    }
+
+  }
+
+  function valMensaje(e) {
+
+    if (mensaje.val() == '' || mensaje.val() == null) {
+      swal ( "Oops" ,  "Por favor, verifica los datos del formulario" ,  "error" )
+      e.preventDefault();
+      $('textarea + .error').css('display', 'block');
+    } else {
+      $('textarea + .error').css('display', 'none');
+    }
+
+  }
+
+  function validacion(e) {
+    valNombre(e);
+    valEmail(e);
+    valMensaje(e);
+  }
+
+  formulario.on('submit', validacion);
+
+})
+
+// Menú Mobil
+$(document).ready(function () {
+
+  var numero = 1;
+
+  $('#btnMenu').on('click', function (e) {
+
+    e.preventDefault();
+    if (numero == 1) {
+      $('.menu-mobile .menu-principal').animate({left:0}, 300, function () {
+        numero = 0;
+      });
+    } else {
+      $('.menu-mobile .menu-principal').animate({left:'-100%'}, 300, function () {
+        numero = 1;
+      })
+    }
+
+  })
+
+  $('.menu-mobile .menu-principal a').on('click', function () {
+
+    $('.menu-mobile .menu-principal').animate({left:'-100%'}, 300, function () {
+      numero = 1;
+    })
+
+  })
+
+});
+
