@@ -117,6 +117,7 @@
           <p>Somos especialistas en entregar los mejores trabajos y la más alta calidad</p>
         </div>
         <div class="galeria-proyectos">
+
           <div class="proyecto">
             <img src="img/proyecto1.jpg" alt="Proyecto" class="imagen-proyecto">
           </div>
@@ -166,6 +167,9 @@
         </div>
         <div class="slide">
           <img src="img/slide4.jpg" alt="Slide">
+        </div>
+        <div class="slide">
+          <img src="img/slide5.jpg" alt="Slide">
         </div>
       </div>
       <div class="btn-anterior" id="btnAnterior">
@@ -253,24 +257,27 @@
     </section>
 
     <!-- Contacto -->
-    <section class="contacto" id="contacto">
+    <div class="contacto" id="contacto" data-parallax="scroll" data-image-src="img/bg-contacto.jpg">
       <div class="contenedor">
         <div class="contenedor-formulario">
-          <div class="formulario">
+          <div class="formulario" id="formulario">
             <h2>Cuéntanos sobre tu proyecto</h2>
-            <p>Describenos tus metas, te acompañaremos y ayudaremos a alcanzarlas.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, fugit.</p>
             <form>
               <div>
-                <input type="text" name="nombre" placeholder="Nombres Completos">
+                <input type="text" name="nombre" placeholder="Nombre" id="nombre">
+                <p class="error">Por favor escribe tu nombre</p>
               </div>
               <div>
-                <input type="email" name="email" placeholder="Correo electrónico">
+                <input type="email" name="email" placeholder="Correo electrónico" id="email">
+                <p class="error">Por favor escribe tu correo</p>
               </div>
               <div>
-                <textarea name="mensaje" placeholder="Cuéntanos de tu proyecto"></textarea>
+                <textarea name="mensaje" placeholder="Cuéntanos de tu proyecto" id="mensaje"></textarea>
+                <p class="error">Por favor escribe tu mensaje</p>
               </div>
               <div>
-                <input type="submit" name="enviar" value="¡Comencemos!">
+                <input type="submit" name="enviar" value="Enviar">
               </div>
             </form>
           </div>
@@ -304,6 +311,7 @@
   <script src="node_modules/sweetalert/dist/sweetalert.min.js"></script>
   <script src="js/jQuery.min.js"></script>
   <script src="js/javascript.js"></script>
+  <script src="js/parallax.min.js"></script>
   <script src="js/prefixfree.min.js"></script>
 
 </body>

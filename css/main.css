@@ -1,4 +1,4 @@
-/*GENERALES*/
+/*CSS GENERAL*/
 
 *{
   margin: 0;
@@ -35,7 +35,7 @@ body{
   font-weight: 400;
 }
 
-/* Botón para volver */
+/*Botón para volver arriba*/
 .btn-volver-arriba{
   display: inline-block;
   width: 40px;
@@ -64,7 +64,7 @@ body{
   line-height: 40px;
 }
 
-/* ------ ENCABEZADO ------ */
+/* El encabezado */
 
 .menu-bar-pc{
   width: 100%;
@@ -139,12 +139,12 @@ body{
   color: #0089E0;
 }
 
-/*Mobile menu*/
+/*Menú Mobil*/
 .menu-mobile{
   display: none;
 }
 
-/* ------ MAIN ------ */
+/* Inicio */
 
 /*Banner principal*/
 
@@ -233,7 +233,42 @@ body{
   vertical-align: top;
 }
 
-/*Modal fotos proyectos*/
+/*Modal - Proyectos*/
+.modal{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.8);
+  z-index: 9999999999;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal img{
+  width: 90%;
+  max-width: 600px;
+}
+
+.modal .btn-cerrar{
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  top: 20px;
+  right: 20px;
+  background: #0089E0;
+  text-align: center;
+  cursor: pointer;
+}
+
+.modal .btn-cerrar i{
+  color: #fff;
+  font-size: 1rem;
+  line-height: 50px;
+}
 
 /*Acerca de*/
 
@@ -379,7 +414,7 @@ body{
   font-weight: 400;
 }
 
-/*Sección información extra*/
+/*Sección, información extra*/
 
 .main .info-extra{
   background: #191919;
@@ -448,10 +483,10 @@ body{
 
 .main .contacto{
   padding: 190px 0;
-  background-image: url('../img/bg-contacto.jpg');
+  /*background-image: url('../img/bg-contacto.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: fixed;*/
 }
 
 .main .contacto .contenedor-formulario{
@@ -538,7 +573,17 @@ body{
   background-size: cover;
 }
 
-/* ------ PIE DE PÁGINA ------ */
+/*Validacion formulario*/
+
+.main .contacto .contenedor-formulario .formulario form .error{
+  display: none;
+  color: #ff8c8c;
+  font-size: 12px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+/* Pie de página */
 
 footer{
   background: #f3f4fa;
@@ -570,7 +615,7 @@ footer .footer-redes a:hover{
 }
 
 
-/* ----- MEDIA QUERIES ----- */
+/* Querie */
 
 @media screen and (max-width:1040px){
   /*Nuestro equipo*/
@@ -591,7 +636,7 @@ footer .footer-redes a:hover{
     margin-right: 20px;
   }
 
-  /*Sección información extra*/
+  /*SecciÃ³n informaciÃ³n extra*/
   .main .info-extra .contenedor .info{
     width: 100%;
   }
@@ -703,7 +748,7 @@ footer .footer-redes a:hover{
     align-items: center;
     text-align: center;
   }
-  /*Sección información extra*/
+  /*SecciÃ³n informaciÃ³n extra*/
   .main .info-extra .contenedor .info .contenido-info{
     flex-wrap: wrap;
     text-align: center;
